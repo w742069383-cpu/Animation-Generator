@@ -1,0 +1,3 @@
+# 🎬 Animation Generator
+
+AI 文字生成视频应用 - 正在搭建中...
