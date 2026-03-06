@@ -2,9 +2,9 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# 安装依赖
-COPY package.json .
-RUN npm install
+# 安装依赖（同时复制 package-lock.json 确保版本一致）
+COPY package.json package-lock.json ./
+RUN npm ci
 
 # 复制源码并构建
 COPY . .
